@@ -115,7 +115,7 @@ app.post('/users/add', function(req, res) {
 });
 
 app.delete('/users/delete/:id', function(req, res) {
-  console.log('ok');
+  console.log('ok?');
   console.log(req.params.id);
 });
 

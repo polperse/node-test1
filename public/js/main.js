@@ -1,9 +1,8 @@
-$(document).ready(function(){
-	$('.deleteUser').on('click', deleteUser)
-});
-
 function deleteUser(){
+
 	var confirmation = confirm('Are you sure?');
+
+	alert('el id es:'+$('.deleteUser').data('id'));
 
 	if (confirmation) {
 		$.ajax({
@@ -18,3 +17,7 @@ function deleteUser(){
 	}
 
 }
+
+$(document).ready(function(){
+	$('.deleteUser').on('click', deleteUser)
+});

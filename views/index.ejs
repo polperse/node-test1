@@ -10,15 +10,15 @@
 		<% } %>
 	<br>
 	<form method="POST" action="/users/add">
-		<label>first name</label>
+		<label id='label1'>first name</label>
 		<br>
 		<input type="text" name="name">
 		<br>
-		<label>nick</label>
+		<label id='label2'>nick</label>
 		<br>
 		<input type="text" name="nick">
 		<br>
-		<label>mail</label>
+		<label id='label3'>mail</label>
 		<br>
 		<input type="text" name="mail">
 		<br><br>
@@ -28,7 +28,7 @@
 	<h1><%= title %></h1>
 	<ul>
 		<% users.forEach(function(user){ %>
-			<li><%= user.name %>, aka: <%= user.nick %> - <a href="#" class="deleteUser" data-id=<% user._id %> >delete</a></li>
+			<li><%= user.name %>, aka: <%= user.nick %> and id: <%= user._id %> - <a href="#" class="deleteUser" data-id="<%= user._id %>" >delete</a></li>
 		<% }) %>
 	</ul>
 <% include partials/footer%>
